@@ -3,7 +3,7 @@ import { RoleType } from '../role/roletype.enum';
 export interface IJwtPayload {
   id: number;
   username: string;
-  emial: string;
+  email: string;
   roles: RoleType[];
   iat?: Date;
 }

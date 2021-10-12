@@ -3,8 +3,8 @@ import { PassportStrategy } from '@nestjs/passport';
 import { InjectRepository } from '@nestjs/typeorm';
 import { JwtPayload } from 'jsonwebtoken';
 import { ExtractJwt, Strategy } from 'passport-jwt';
-import { Configuration } from 'src/config/config.keys';
-import { ConfigService } from 'src/config/config.service';
+import { Configuration } from '../../../config/config.keys';
+import { ConfigService } from '../../../config/config.service';
 import { AuthRepository } from '../auth.repository';
 
 @Injectable()

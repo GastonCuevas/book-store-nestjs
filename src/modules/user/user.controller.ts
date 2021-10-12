@@ -7,7 +7,9 @@ import {
   ParseIntPipe,
   Patch,
   Post,
+  UseGuards,
 } from '@nestjs/common';
+import { AuthGuard } from '@nestjs/passport';
 import { UserDto } from './dto/user.dto';
 import { User } from './user.entity';
 import { UserService } from './user.service';
@@ -22,6 +24,7 @@ export class UserController {
     return user;
   }
 
+  //@UseGuards(AuthGuard()) El AuthGuard hace que sea necesario utilizar el token bearer para acceder a la ruta
   @Get()
   async getUsers() {
     const users = await this._userService.getAll();
